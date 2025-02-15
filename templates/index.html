@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Be My Valentine, Areesha? ❤️</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; background-color: pink; }
+        .container { margin-top: 100px; }
+        .btn { padding: 15px 25px; font-size: 20px; margin: 10px; cursor: pointer; border-radius: 10px; }
+        .yes { background-color: red; color: white; border: none; }
+        .no { background-color: gray; color: white; border: none; position: absolute; }
+    </style>
+    <script>
+        function moveNoButton() {
+            let noBtn = document.getElementById('no-btn');
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine, Areesha? ❤️</h1>
+        <button class="btn yes" onclick="alert('Yay! I love you, Areesha! ❤️')">Yes</button>
+        <button class="btn no" id="no-btn" onclick="window.location.href='/no'" onmouseover="moveNoButton()">No</button>
+    </div>
+</body>
+</html>
