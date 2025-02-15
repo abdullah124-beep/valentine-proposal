@@ -1,17 +1,15 @@
-from flask import Flask, render_template
+import streamlit as st
 
-app = Flask(__name__)
+st.title("❤️ Will You Be My Valentine? ❤️")
 
-@app.route('/')
-def home():
-    return render_template('index.html', name="Areesha")
+answer = st.radio("Choose your answer:", ["Yes", "No"])
 
-@app.route('/no')
-def no_response():
-    return render_template('no.html')
+if answer == "Yes":
+    st.balloons()
+    st.success("Yay! I love you, Areesha! ❤️🥰")
+else:
+    st.error("Sorry, wrong answer ma’am! Say yes, nahi to maru ga! 😂")
 
-if __name__ == '__main__':
-    app.run(debug=True)
 
 # HTML files to create:
 # templates/index.html
